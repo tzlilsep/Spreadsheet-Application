@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="jakarta.servlet-api-5.0.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/jakarta.servlet-api-5.0.0.jar!/"/>
+	</lib>
+	<levels>
+		<level name="javafx-swt" value="project"/>
+		<level name="okHttp" value="project"/>
+		<level name="google-gson-2.1" value="project"/>
+		<level name="mod" value="project"/>
+		<level name="lib" value="project"/>
+		<level name="Java EE 6-Java EE 6" value="project"/>
+	</levels>
+</component>

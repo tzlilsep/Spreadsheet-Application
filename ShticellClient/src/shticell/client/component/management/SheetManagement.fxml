@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shticell.client.component.management.SheetManagementController">
+
+   <!-- Center section with available sheets table and permissions table -->
+   <center>
+      <VBox prefHeight="330.0" prefWidth="610.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane>
+               <content>
+                  <!-- Available Sheets Table -->
+
+                  <TableView fx:id="sheetsTable" prefHeight="170.0" prefWidth="508.5">
+                     <columns>
+                        <TableColumn fx:id="usernameColumn" prefWidth="127" text="Owner Name" />
+                        <TableColumn fx:id="sheetNameColumn" prefWidth="127" text="Sheet Name" />
+                        <TableColumn fx:id="sizeColumn" prefWidth="125" text="Size" />
+                        <TableColumn fx:id="permissionType" prefWidth="127" text="Permission Type" />
+                     </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <ScrollPane>
+               <content>
+
+                  <!-- Permissions Table -->
+                  <TableView fx:id="permissionTable" prefHeight="170.0" prefWidth="508.5">
+                     <columns>
+                        <TableColumn fx:id="permissionUsernameColumn" prefWidth="127.0" text="Username" />
+                        <TableColumn fx:id="permissionAuthTypeColumn" prefWidth="127.0" text="Permission Type" />
+                        <TableColumn fx:id="permissionStatusColumn" prefWidth="252" text="Status" />
+                     </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+
+   <!-- Right section with commands -->
+   <right>
+      <VBox prefHeight="438.0" prefWidth="189.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="BOTTOM_CENTER" prefHeight="2.0" prefWidth="190.0" text="Commands" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font  name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="190.0" text="(choose sheet first)" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="viewSheetButton" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="303.0" text="View Sheet" onAction="#handleViewSheet" />
+            <Button fx:id="requestPermissionButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="406.0" text="Request Permission" onAction="#handleRequestPermission" />
+            <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="190.0" text="(choose permission first)" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="acknowledgeDenyPermissionButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="432.0" text="Acknowledge/Deny Permission" onAction="#handleAcknowledgeDenyPermission" />
+         </children>
+      </VBox>
+   </right>
+
+   <!-- Top section for user name and Load XML button -->
+   <top>
+      <VBox prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="usernameLable" alignment="CENTER_LEFT" prefHeight="2.0" prefWidth="190.0" text="hello username" >
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="loadXmlButton" mnemonicParsing="false" prefHeight="46.0" prefWidth="117.0" text="Load XML" textFill="#1d28b9" onAction="#handleLoadXmlAction">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
